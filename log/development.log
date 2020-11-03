@@ -8491,3 +8491,419 @@ Processing by EventsController#show as HTML
 Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.9ms | Allocations: 8015)
 
 
+Started GET "/" for ::1 at 2020-11-03 20:50:26 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 7604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 70ms (Views: 50.3ms | ActiveRecord: 13.9ms | Allocations: 25509)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-11-03 20:50:46 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DlGEJR8ZLaP+AGQML0ezmHwUiF2d4f5aIHvpWDNpME0h0fgJ0SJbfqI47E1RtHbeHUN7MJARyzJiwNkTMd7a/g=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 172ms (ActiveRecord: 0.4ms | Allocations: 200954)
+
+
+Started GET "/" for ::1 at 2020-11-03 20:50:46 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1366)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 5678)
+
+
+Started GET "/events/1" for ::1 at 2020-11-03 20:50:48 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:13
+  Rendered events/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3711)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.8ms | Allocations: 8738)
+
+
+Started GET "/users/2" for ::1 at 2020-11-03 20:50:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3015)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4473)
+
+
+
+NoMethodError - undefined method `first_name' for nil:NilClass:
+  app/views/users/show.html.erb:14
+
+Started POST "/__better_errors/07207047c32076d9/variables" for ::1 at 2020-11-03 20:50:50 +0100
+Started GET "/users/2" for ::1 at 2020-11-03 20:51:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2568)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3329)
+
+
+
+NoMethodError - undefined method `first_name' for nil:NilClass:
+  app/views/users/show.html.erb:14
+
+Started POST "/__better_errors/d6ddb4022bde49f6/variables" for ::1 at 2020-11-03 20:51:42 +0100
+Started GET "/users/2" for ::1 at 2020-11-03 20:52:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2736)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4328)
+
+
+
+NoMethodError - undefined method `first_name' for nil:NilClass:
+  app/views/users/show.html.erb:14
+
+Started POST "/__better_errors/2e4f2633db301568/variables" for ::1 at 2020-11-03 20:52:27 +0100
+Started GET "/users/2" for ::1 at 2020-11-03 20:52:57 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 0.0ms | Allocations: 104532)
+
+
+
+NameError - undefined local variable or method `user' for #<UsersController:0x00007f2c042d9510>
+Did you mean?  super:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/daa006fdc0bc14d7/variables" for ::1 at 2020-11-03 20:52:57 +0100
+Started GET "/users/2" for ::1 at 2020-11-03 20:53:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms | Allocations: 108283)
+
+
+
+NameError - undefined local variable or method `user' for #<UsersController:0x00007f2c0418a2b8>
+Did you mean?  super:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/9d0f4cb79e0d878c/variables" for ::1 at 2020-11-03 20:53:02 +0100
+Started GET "/users/2" for ::1 at 2020-11-03 20:53:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1298)
+
+
+
+NoMethodError - undefined method `admin_event' for nil:NilClass:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/afd00bbbb6bfdffc/variables" for ::1 at 2020-11-03 20:53:37 +0100
+Started GET "/events/1" for ::1 at 2020-11-03 20:54:09 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:13
+  Rendered events/show.html.erb within layouts/application (Duration: 24.7ms | Allocations: 8391)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 23.5ms | ActiveRecord: 13.2ms | Allocations: 21534)
+
+
+Started GET "/users/2" for ::1 at 2020-11-03 20:54:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (50.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (2) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 50.3ms | Allocations: 2801)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "users".* FROM "users" WHERE (2) LIMIT $1
+                                             ^:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/e31ef6d12baf3794/variables" for ::1 at 2020-11-03 20:54:10 +0100
+Started GET "/events/12" for ::1 at 2020-11-03 20:54:20 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:13
+  Rendered events/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 846)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.0ms | Allocations: 5690)
+
+
+Started GET "/users/1" for ::1 at 2020-11-03 20:54:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.2ms | Allocations: 2764)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "users".* FROM "users" WHERE (1) LIMIT $1
+                                             ^:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/8007172c0b040953/variables" for ::1 at 2020-11-03 20:54:21 +0100
+Started GET "/events/13" for ::1 at 2020-11-03 20:54:27 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:13
+  Rendered events/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 847)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 1.0ms | Allocations: 5705)
+
+
+Started GET "/users/1" for ::1 at 2020-11-03 20:54:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.2ms | Allocations: 2751)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "users".* FROM "users" WHERE (1) LIMIT $1
+                                             ^:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/2247d49958bd4642/variables" for ::1 at 2020-11-03 20:54:28 +0100
+Started GET "/users/sign_in" for ::1 at 2020-11-03 20:57:35 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 609)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 216.1ms | Allocations: 200761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 263ms (Views: 233.9ms | ActiveRecord: 5.8ms | Allocations: 216267)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-11-03 20:57:44 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eMeuwCUwPuoTKDZnswEAkfsYGPoDOki1GztuqDRpsQnicSitSQIli0iwmRnZ5bPJffTrFCHknFjh+Q2j407tzQ==", "user"=>{"email"=>"clementine.fouque@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "clementine.fouque@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 425ms (ActiveRecord: 1.0ms | Allocations: 3372)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"eMeuwCUwPuoTKDZnswEAkfsYGPoDOki1GztuqDRpsQnicSitSQIli0iwmRnZ5bPJffTrFCHknFjh+Q2j407tzQ==", "user"=>{"email"=>"clementine.fouque@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1041)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 198ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 5203)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-11-03 20:57:48 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 199)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 119)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1795)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 6932)
+
+
+Started POST "/users" for ::1 at 2020-11-03 20:58:04 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"3LGIKgRJBF/NWm3AZym2KRXJ99gHZX1Qov5t296b5jNGBw5HaHsfPpbCwr4NzQVxkyUENiW7qb1YPA7QCby69w==", "user"=>{"email"=>"clementine.fouque@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "clementine.fouque@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 274ms (Views: 21.4ms | ActiveRecord: 1.0ms | Allocations: 16984)
+
+
+Started POST "/users" for ::1 at 2020-11-03 20:58:20 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"2QyN/iigUWQOHiroCvt1J7dzIfLgSas1aiN2dmqfe/xDuguTRJJKBVWGhZZgH8Z/MZ/SHMKXf9iQ4RV9vbgnOA==", "user"=>{"email"=>"clementine@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "clementine@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "clementine@gmail.com"], ["encrypted_password", "$2a$12$jAbhIA2kW9oZIJgJEvDk9.n5E0vSvjuPnqvgzvpXnhXq67.QEl26a"], ["created_at", "2020-11-03 19:58:20.451499"], ["updated_at", "2020-11-03 19:58:20.451499"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 26.3ms | Allocations: 152)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 1.0ms | Allocations: 131)
+UserMailer#welcome_email: processed outbound mail in 43.4ms
+Delivered mail 5fa1b65c7ba17_11146611c-34@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (423.1ms)
+Date: Tue, 03 Nov 2020 20:58:20 +0100
+From: filou78@yopmail.com
+To: clementine@gmail.com
+Message-ID: <5fa1b65c7ba17_11146611c-34@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1b65c793f9_11146611c-48c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1b65c793f9_11146611c-48c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgIGV0IGJpZW52ZW51ZSBjaGV6IG5vdXMgIQ0KPT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PQ0KDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIgZW4gdXRpbGlz
+YW50IGwnZS1tYWlsIHN1aXZhbnQgOiBjbGVtZW50aW5lQGdtYWlsLmNvbS4N
+Cg0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVudCwgY29ubmVj
+dGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZyL2xvZ2luLg0KDQrDgCB0
+csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_5fa1b65c793f9_11146611c-48c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut  et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : clem=
+entine@gmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1b65c793f9_11146611c-48c--
+
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 709ms (ActiveRecord: 32.6ms | Allocations: 46381)
+
+
+Started GET "/" for ::1 at 2020-11-03 20:58:20 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 7052)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 35ms (Views: 23.1ms | ActiveRecord: 5.5ms | Allocations: 15112)
+
+
+Started GET "/events/1" for ::1 at 2020-11-03 20:58:24 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:13
+  Rendered events/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 23ms (Views: 16.7ms | ActiveRecord: 1.7ms | Allocations: 9562)
+
+
+Started GET "/users/2" for ::1 at 2020-11-03 20:58:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (2) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.3ms | Allocations: 2831)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "users".* FROM "users" WHERE (2) LIMIT $1
+                                             ^:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/f92d311d72217862/variables" for ::1 at 2020-11-03 20:58:25 +0100
+Started GET "/events/13" for ::1 at 2020-11-03 20:58:34 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:13
+  Rendered events/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 1.7ms | Allocations: 6566)
+
+
+Started GET "/users/1" for ::1 at 2020-11-03 20:58:36 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 2.1ms | Allocations: 2751)
+
+
+
+ActiveRecord::StatementInvalid - PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "users".* FROM "users" WHERE (1) LIMIT $1
+                                             ^:
+  app/controllers/users_controller.rb:8:in `show'
+
+Started POST "/__better_errors/8379063ed549bcc1/variables" for ::1 at 2020-11-03 20:58:36 +0100
+Started GET "/users/1" for ::1 at 2020-11-03 20:59:34 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 8.7ms | ActiveRecord: 5.2ms | Allocations: 12295)
+
+
