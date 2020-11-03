@@ -8,8 +8,8 @@ class Event < ApplicationRecord
 
   validates :start_date, presence: true, inclusion: { in: (Date.today..Date.today+5.years) }
 
-  validate :only_valid_duration
-  validates :duration, presence: true
+
+  validates :duration, presence: true, numericality: { greater_than_or_equal_to: 1 }, if: :multiple_of_five?
 
   validates :title, presence: true, length: { in: 5..40 }
   validates :description, presence: true, length: { in: 20..1000 }
@@ -17,10 +17,8 @@ class Event < ApplicationRecord
   validates :location, presence: true
 
 
-  def only_valid_duration
-    if (self.duration % 5) != 0 || self.duration < 0
-        self.errors[:base] << "La durée doit être un multiple de 5 !"
-    end
-end
+  def multiple_of_five?
+    errors.add(:duration, "should be a multiple of 5.") unless duration % 5 == 0
+  end
 
 end

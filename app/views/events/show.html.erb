@@ -1,1 +1,17 @@
-<h1>afficher ici</h1>
+<div class="container">
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <p class="lead">Event <%=params[:id]%> : <%= @event.title %></p>
+
+    <!-- GOSSIP -->
+    <h6 class="font-weight-bold">Date : <span class="text-muted"><%= @event.start_date %></span></h6>
+    <h6 class="font-weight-bold">Durée : <span class="text-muted"><%= @event.duration %></span></h6>
+    <h6 class="font-weight-bold">Prix : <span class="text-muted"><%= @event.price %></span></h6>
+    <h6 class="font-weight-bold">Lieu : <span class="text-muted"><%= @event.location %></span></h6>
+    <br><br>
+    <h6 class="font-weight-bold"><span class="text-secondary"><%= @event.description %></span></h6>
+    <br><br>
+    <%= link_to "En savoir plus sur l'organisateur", user_path(@event.event_admin.id), class:"btn btn-outline-success"%>
+
+
+  </div>
+</div>

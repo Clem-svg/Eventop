@@ -14,22 +14,27 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(title: params[:title], description: params[:description], start_date: params[:start_date], duration: params[:duration], price: params[:price], location: params[:location], event_admin: current_user)
+    @event = Event.new(post_params)
+    @event.event_admin = current_user
 
     if @event.save
-      flash[:notice] = "Event sauvegardé"
-      redirect_to root_path
+      redirect_to event_path(@event.id), success: "Evénement créé avec succès !"
     else
       render :new
     end
   end
 
   private
-  
+
   def authenticate_user
     unless current_user
       flash[:danger] = "Il faut s'enregistrer bb"
       redirect_to new_user_session_path
     end
   end
+
+  def post_params
+    post_params = params.require(:event).permit(:start_date, :title, :duration, :description, :price, :location)
+  end
+
 end

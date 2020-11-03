@@ -7093,3 +7093,1401 @@ NoMethodError - undefined method `%' for nil:NilClass:
   app/controllers/events_controller.rb:19:in `create'
 
 Started POST "/__better_errors/45d5fb30d1bc9810/variables" for ::1 at 2020-11-03 19:22:10 +0100
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE DATABASE "EventBrite_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "EventBrite_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1617165366461285235)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1617165366461285235)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "claywill@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "claywill@yopmail.com"], ["encrypted_password", "$2a$12$RrrO9pZczgXac0EDPITpOuV.ymxBiKzDQLR9H/KI.OQra03IV8EZu"], ["description", "We'll definitely be back next year. If not, it'll be because an asteroid has destroyed all human civilization. And that's canon."], ["first_name", "Andrew"], ["last_name", "Halvorson"], ["created_at", "2020-11-03 18:44:40.650368"], ["updated_at", "2020-11-03 18:44:40.650368"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 267)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.2ms | Allocations: 131)
+UserMailer#welcome_email: processed outbound mail in 8.0ms
+Delivered mail 5fa1a518a33c6_e686157c-3d7@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (647.0ms)
+Date: Tue, 03 Nov 2020 19:44:40 +0100
+From: filou78@yopmail.com
+To: claywill@yopmail.com
+Message-ID: <5fa1a518a33c6_e686157c-3d7@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a518a2458_e686157c-4d7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a518a2458_e686157c-4d7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgQW5kcmV3IGV0IGJpZW52ZW51ZSBjaGV6IG5vdXMgIQ0KPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PQ0KDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIgZW4g
+dXRpbGlzYW50IGwnZS1tYWlsIHN1aXZhbnQgOiBjbGF5d2lsbEB5b3BtYWls
+LmNvbS4NCg0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVudCwg
+Y29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZyL2xvZ2luLg0K
+DQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_5fa1a518a2458_e686157c-4d7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Andrew et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : clay=
+will@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a518a2458_e686157c-4d7--
+
+  [1m[35m (90.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "scotterdman@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "scotterdman@yopmail.com"], ["encrypted_password", "$2a$12$fSLGo7.3F7T6xmwsT1t5V.7aJA2GA.M3u2.sDd4OjYxxOPQtqBK9C"], ["description", "Do they find thoughts in our butts?"], ["first_name", "Abigail"], ["last_name", "Crooks"], ["created_at", "2020-11-03 18:44:41.608226"], ["updated_at", "2020-11-03 18:44:41.608226"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 11.3ms
+Delivered mail 5fa1a51997fa5_e686157c-16f@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (1535.6ms)
+Date: Tue, 03 Nov 2020 19:44:41 +0100
+From: filou78@yopmail.com
+To: scotterdman@yopmail.com
+Message-ID: <5fa1a51997fa5_e686157c-16f@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a519972f4_e686157c-2b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a519972f4_e686157c-2b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgQWJpZ2FpbCBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT0NCg0KVHUgdCdlcyBpbnNjcml0IHN1ciBtb25zaXRlLmZyIGVu
+IHV0aWxpc2FudCBsJ2UtbWFpbCBzdWl2YW50IDogc2NvdHRlcmRtYW5AeW9w
+bWFpbC5jb20uDQoNClBvdXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGll
+bnQsIGNvbm5lY3RlLXRvaSB2aWEgOiBodHRwOi8vbW9uc2l0ZS5mci9sb2dp
+bi4NCg0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_5fa1a519972f4_e686157c-2b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Abigail et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : scot=
+terdman@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a519972f4_e686157c-2b--
+
+  [1m[35m (48.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kacykuhn@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "kacykuhn@yopmail.com"], ["encrypted_password", "$2a$12$XnWm30ZIepOBfzIkcUlYgugewrgodFYyYP.Ne1m4AwU3xFF3Cipmi"], ["description", "We're all kind of crazytown bananapants."], ["first_name", "Brett"], ["last_name", "Balistreri"], ["created_at", "2020-11-03 18:44:43.402353"], ["updated_at", "2020-11-03 18:44:43.402353"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 4.3ms
+Delivered mail 5fa1a51b63f6d_e686157c12a@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (1198.4ms)
+Date: Tue, 03 Nov 2020 19:44:43 +0100
+From: filou78@yopmail.com
+To: kacykuhn@yopmail.com
+Message-ID: <5fa1a51b63f6d_e686157c12a@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a51b63294_e686157c084";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a51b63294_e686157c084
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgQnJldHQgZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09DQoNClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGthY3lrdWhuQHlvcG1haWwu
+Y29tLg0KDQpQb3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2UgY2xpZW50LCBj
+b25uZWN0ZS10b2kgdmlhIDogaHR0cDovL21vbnNpdGUuZnIvbG9naW4uDQoN
+CsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_5fa1a51b63294_e686157c084
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Brett et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : kacy=
+kuhn@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a51b63294_e686157c084--
+
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "esperanzadeckow@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "esperanzadeckow@yopmail.com"], ["encrypted_password", "$2a$12$XQMdE8FXEC4iOScxZ0Dzn.T8bPU4mTCFrA0cnoEJ6hzp1HeTwza2O"], ["description", "I was so unpopular in high school, the crossing guards used to lure me into traffic."], ["first_name", "Courtney"], ["last_name", "Wyman"], ["created_at", "2020-11-03 18:44:44.818225"], ["updated_at", "2020-11-03 18:44:44.818225"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 4.3ms
+Delivered mail 5fa1a51cc9815_e686157c36b@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (1056.5ms)
+Date: Tue, 03 Nov 2020 19:44:44 +0100
+From: filou78@yopmail.com
+To: esperanzadeckow@yopmail.com
+Message-ID: <5fa1a51cc9815_e686157c36b@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a51cc8b90_e686157c24d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a51cc8b90_e686157c24d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgQ291cnRuZXkgZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09DQoNClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBl
+biB1dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGVzcGVyYW56YWRlY2tv
+d0B5b3BtYWlsLmNvbS4NCg0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNl
+IGNsaWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZy
+L2xvZ2luLg0KDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_5fa1a51cc8b90_e686157c24d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Courtney et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : espe=
+ranzadeckow@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a51cc8b90_e686157c24d--
+
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "belindamaggio@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "belindamaggio@yopmail.com"], ["encrypted_password", "$2a$12$x4CVFLq34z4s.xsgPdnVpO3M73OYBST/BPi1wOtiANHWLHFmMdZJe"], ["description", "Harrison Ford is irradiating our testicles with microwave satellite transmissions!"], ["first_name", "Chara"], ["last_name", "Padberg"], ["created_at", "2020-11-03 18:44:46.084331"], ["updated_at", "2020-11-03 18:44:46.084331"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 4.4ms
+Delivered mail 5fa1a51e16607_e686157c51c@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (547.1ms)
+Date: Tue, 03 Nov 2020 19:44:46 +0100
+From: filou78@yopmail.com
+To: belindamaggio@yopmail.com
+Message-ID: <5fa1a51e16607_e686157c51c@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a51e158c4_e686157c45e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a51e158c4_e686157c45e
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgQ2hhcmEgZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09DQoNClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGJlbGluZGFtYWdnaW9AeW9w
+bWFpbC5jb20uDQoNClBvdXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGll
+bnQsIGNvbm5lY3RlLXRvaSB2aWEgOiBodHRwOi8vbW9uc2l0ZS5mci9sb2dp
+bi4NCg0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_5fa1a51e158c4_e686157c45e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Chara et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : beli=
+ndamaggio@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a51e158c4_e686157c45e--
+
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gavinrunte@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "gavinrunte@yopmail.com"], ["encrypted_password", "$2a$12$4kq3gPpQvteOcBvyHVKZzu/uPnCRCbLfWhkpHbaHiKIZDjKhbOh5u"], ["description", "A passing grade? Like a C? Why don't I just get pregnant at a bus station?"], ["first_name", "Fredrick"], ["last_name", "Hirthe"], ["created_at", "2020-11-03 18:44:46.850845"], ["updated_at", "2020-11-03 18:44:46.850845"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 5.2ms
+Delivered mail 5fa1a51ed1c20_e686157c7b3@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (393.9ms)
+Date: Tue, 03 Nov 2020 19:44:46 +0100
+From: filou78@yopmail.com
+To: gavinrunte@yopmail.com
+Message-ID: <5fa1a51ed1c20_e686157c7b3@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a51ed0d16_e686157c6b0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a51ed0d16_e686157c6b0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgRnJlZHJpY2sgZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09DQoNClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBl
+biB1dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IGdhdmlucnVudGVAeW9w
+bWFpbC5jb20uDQoNClBvdXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGll
+bnQsIGNvbm5lY3RlLXRvaSB2aWEgOiBodHRwOi8vbW9uc2l0ZS5mci9sb2dp
+bi4NCg0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_5fa1a51ed0d16_e686157c6b0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Fredrick et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : gavi=
+nrunte@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a51ed0d16_e686157c6b0--
+
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sherrilstark@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "sherrilstark@yopmail.com"], ["encrypted_password", "$2a$12$iZ9M2Z9GRWhccRxoxZP5gejkj3p8ML8GsW/z7D7z7PeMhm5qmWBRq"], ["description", "I fear a political career could shine a negative light on my drug dealing."], ["first_name", "Alberta"], ["last_name", "Berge"], ["created_at", "2020-11-03 18:44:47.460895"], ["updated_at", "2020-11-03 18:44:47.460895"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 4.8ms
+Delivered mail 5fa1a51f72730_e686157c99@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (415.0ms)
+Date: Tue, 03 Nov 2020 19:44:47 +0100
+From: filou78@yopmail.com
+To: sherrilstark@yopmail.com
+Message-ID: <5fa1a51f72730_e686157c99@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a51f718d3_e686157c887";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a51f718d3_e686157c887
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgQWxiZXJ0YSBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT0NCg0KVHUgdCdlcyBpbnNjcml0IHN1ciBtb25zaXRlLmZyIGVu
+IHV0aWxpc2FudCBsJ2UtbWFpbCBzdWl2YW50IDogc2hlcnJpbHN0YXJrQHlv
+cG1haWwuY29tLg0KDQpQb3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2UgY2xp
+ZW50LCBjb25uZWN0ZS10b2kgdmlhIDogaHR0cDovL21vbnNpdGUuZnIvbG9n
+aW4uDQoNCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_5fa1a51f718d3_e686157c887
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Alberta et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : sher=
+rilstark@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a51f718d3_e686157c887--
+
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cheryleledner@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cheryleledner@yopmail.com"], ["encrypted_password", "$2a$12$BqGw15Q9bLmobeRP5WQFNOFSGntTCjGQTotzQ33sPrZOPQwoeVqV2"], ["description", "So.. what is anthropology? Seriously, does anyone know?"], ["first_name", "Delfina"], ["last_name", "Ward"], ["created_at", "2020-11-03 18:44:48.091260"], ["updated_at", "2020-11-03 18:44:48.091260"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 4.9ms
+Delivered mail 5fa1a5201835e_e686157c1139@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (396.2ms)
+Date: Tue, 03 Nov 2020 19:44:48 +0100
+From: filou78@yopmail.com
+To: cheryleledner@yopmail.com
+Message-ID: <5fa1a5201835e_e686157c1139@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a520174bb_e686157c10af";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a520174bb_e686157c10af
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgRGVsZmluYSBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT0NCg0KVHUgdCdlcyBpbnNjcml0IHN1ciBtb25zaXRlLmZyIGVu
+IHV0aWxpc2FudCBsJ2UtbWFpbCBzdWl2YW50IDogY2hlcnlsZWxlZG5lckB5
+b3BtYWlsLmNvbS4NCg0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNs
+aWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZyL2xv
+Z2luLg0KDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_5fa1a520174bb_e686157c10af
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Delfina et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : cher=
+yleledner@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a520174bb_e686157c10af--
+
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "karinehaley@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "karinehaley@yopmail.com"], ["encrypted_password", "$2a$12$gOfayZcaVRjV7QsT8Z363e.GEBCIfiwXVB/.ICjl52v2MkvVompQ2"], ["description", "Look at me. It's clear to you that I am awesome, but I can never admit that, because that would make me an ass."], ["first_name", "Shalon"], ["last_name", "D'Amore"], ["created_at", "2020-11-03 18:44:48.700881"], ["updated_at", "2020-11-03 18:44:48.700881"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 5.2ms
+Delivered mail 5fa1a520ad311_e686157c13f4@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (401.9ms)
+Date: Tue, 03 Nov 2020 19:44:48 +0100
+From: filou78@yopmail.com
+To: karinehaley@yopmail.com
+Message-ID: <5fa1a520ad311_e686157c13f4@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a520ac47c_e686157c12d1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a520ac47c_e686157c12d1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgU2hhbG9uIGV0IGJpZW52ZW51ZSBjaGV6IG5vdXMgIQ0KPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PQ0KDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIgZW4g
+dXRpbGlzYW50IGwnZS1tYWlsIHN1aXZhbnQgOiBrYXJpbmVoYWxleUB5b3Bt
+YWlsLmNvbS4NCg0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNsaWVu
+dCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZyL2xvZ2lu
+Lg0KDQrDgCB0csOocyB2aXRlIHN1ciBtb25zaXRlLmZyICENCg==
+
+----==_mimepart_5fa1a520ac47c_e686157c12d1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Shalon et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : kari=
+nehaley@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a520ac47c_e686157c12d1--
+
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tyrellwintheiser@yopmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "description", "first_name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "tyrellwintheiser@yopmail.com"], ["encrypted_password", "$2a$12$idOJxRVY0K8ge6N60YeOoOlzOuwfPmIG4MlfhQhHEmhRbSUZrOfX6"], ["description", "I had sex with Eartha Kitt in an airplane bathroom"], ["first_name", "Palmer"], ["last_name", "Douglas"], ["created_at", "2020-11-03 18:44:49.321792"], ["updated_at", "2020-11-03 18:44:49.321792"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 8)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+UserMailer#welcome_email: processed outbound mail in 4.8ms
+Delivered mail 5fa1a52150717_e686157c15ca@clementine-TUF-Gaming-FX705DU-TUF705DU.mail (265.9ms)
+Date: Tue, 03 Nov 2020 19:44:49 +0100
+From: filou78@yopmail.com
+To: tyrellwintheiser@yopmail.com
+Message-ID: <5fa1a52150717_e686157c15ca@clementine-TUF-Gaming-FX705DU-TUF705DU.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fa1a5214f8fe_e686157c146a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fa1a5214f8fe_e686157c146a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgUGFsbWVyIGV0IGJpZW52ZW51ZSBjaGV6IG5vdXMgIQ0KPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PQ0KDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIgZW4g
+dXRpbGlzYW50IGwnZS1tYWlsIHN1aXZhbnQgOiB0eXJlbGx3aW50aGVpc2Vy
+QHlvcG1haWwuY29tLg0KDQpQb3VyIGFjY8OpZGVyIMOgIHRvbiBlc3BhY2Ug
+Y2xpZW50LCBjb25uZWN0ZS10b2kgdmlhIDogaHR0cDovL21vbnNpdGUuZnIv
+bG9naW4uDQoNCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_5fa1a5214f8fe_e686157c146a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Palmer et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : tyre=
+llwintheiser@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fa1a5214f8fe_e686157c146a--
+
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (41.9ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-07-17 00:00:00"], ["duration", 15], ["title", "Chenipan"], ["description", "Evenement a destination des Design Executive et qui ont vu récement Catch Me If You Can"], ["price", 822], ["location", "avenue Bariloche"], ["event_admin_id", 2], ["created_at", "2020-11-03 18:44:49.644189"], ["updated_at", "2020-11-03 18:44:49.644189"]]
+  [1m[35m (31.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-10-31 00:00:00"], ["duration", 15], ["title", "Chenipan"], ["description", "Evenement a destination des Human Engineer et qui ont vu récement Hacksaw Ridge"], ["price", 802], ["location", "avenue Bariloche"], ["event_admin_id", 7], ["created_at", "2020-11-03 18:44:49.728928"], ["updated_at", "2020-11-03 18:44:49.728928"]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-09-07 00:00:00"], ["duration", 90], ["title", "Ratata"], ["description", "Evenement a destination des Corporate Sales Supervisor et qui ont vu récement The Bourne Ultimatum"], ["price", 305], ["location", "rue de Mendoza"], ["event_admin_id", 10], ["created_at", "2020-11-03 18:44:49.748565"], ["updated_at", "2020-11-03 18:44:49.748565"]]
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-09-11 00:00:00"], ["duration", 90], ["title", "Salameche"], ["description", "Evenement a destination des Chief Accounting Facilitator et qui ont vu récement Psycho"], ["price", 130], ["location", "impasse Buenos Aires"], ["event_admin_id", 1], ["created_at", "2020-11-03 18:44:49.771320"], ["updated_at", "2020-11-03 18:44:49.771320"]]
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-08-27 00:00:00"], ["duration", 60], ["title", "Roucoul"], ["description", "Evenement a destination des Manufacturing Director et qui ont vu récement The Bourne Ultimatum"], ["price", 901], ["location", "avenue Bariloche"], ["event_admin_id", 1], ["created_at", "2020-11-03 18:44:49.799794"], ["updated_at", "2020-11-03 18:44:49.799794"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-04-30 00:00:00"], ["duration", 60], ["title", "Chenipan"], ["description", "Evenement a destination des Healthcare Administrator et qui ont vu récement Star Wars: Episode I – The Phantom Menace"], ["price", 659], ["location", "place Salta"], ["event_admin_id", 5], ["created_at", "2020-11-03 18:44:49.815795"], ["updated_at", "2020-11-03 18:44:49.815795"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-06-05 00:00:00"], ["duration", 30], ["title", "Chenipan"], ["description", "Evenement a destination des Advertising Technician et qui ont vu récement The Dark Knight Rises"], ["price", 64], ["location", "boulevard Cordoba"], ["event_admin_id", 11], ["created_at", "2020-11-03 18:44:49.839024"], ["updated_at", "2020-11-03 18:44:49.839024"]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-01-29 00:00:00"], ["duration", 90], ["title", "Pikachu"], ["description", "Evenement a destination des Consulting Facilitator et qui ont vu récement Apocalypse Now"], ["price", 483], ["location", "rue de Mendoza"], ["event_admin_id", 3], ["created_at", "2020-11-03 18:44:49.859912"], ["updated_at", "2020-11-03 18:44:49.859912"]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2021-10-06 00:00:00"], ["duration", 60], ["title", "Carapuce"], ["description", "Evenement a destination des Administration Engineer et qui ont vu récement Memento"], ["price", 559], ["location", "stade Rosario"], ["event_admin_id", 5], ["created_at", "2020-11-03 18:44:49.883165"], ["updated_at", "2020-11-03 18:44:49.883165"]]
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2020-12-15 00:00:00"], ["duration", 30], ["title", "Pikachu"], ["description", "Evenement a destination des Future Healthcare Coordinator et qui ont vu récement Toy Story 2"], ["price", 504], ["location", "avenue Bariloche"], ["event_admin_id", 6], ["created_at", "2020-11-03 18:44:49.907072"], ["updated_at", "2020-11-03 18:44:49.907072"]]
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started GET "/" for ::1 at 2020-11-03 19:45:02 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 23.7ms | Allocations: 7438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 104ms (Views: 86.6ms | ActiveRecord: 11.0ms | Allocations: 42967)
+
+
+Started GET "/" for ::1 at 2020-11-03 19:45:27 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.0ms | Allocations: 6349)
+
+
+Started GET "/" for ::1 at 2020-11-03 19:45:28 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.3ms | Allocations: 6352)
+
+
+Started GET "/events/new" for ::1 at 2020-11-03 19:45:32 +0100
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 148.4ms | Allocations: 204569)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 160ms (Views: 153.3ms | ActiveRecord: 0.5ms | Allocations: 209748)
+
+
+Started POST "/events" for ::1 at 2020-11-03 19:46:26 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"05hv1Yur1/tqhlm3CbJ6z36Dyjqoz3YWndRdA4MqpkD8GBP5RZChJja+0fZ3Qb+JH9Q5V6U/Q37fb21IgZ1M8w==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder Community toute la night", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 5926)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/940f972e948a7094/variables" for ::1 at 2020-11-03 19:46:26 +0100
+Started POST "/__better_errors/940f972e948a7094/variables" for ::1 at 2020-11-03 19:46:36 +0100
+Started POST "/__better_errors/940f972e948a7094/variables" for ::1 at 2020-11-03 19:52:46 +0100
+Started POST "/__better_errors/940f972e948a7094/variables" for ::1 at 2020-11-03 19:52:48 +0100
+Started POST "/__better_errors/940f972e948a7094/variables" for ::1 at 2020-11-03 19:52:49 +0100
+Started POST "/events" for ::1 at 2020-11-03 19:54:31 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"05hv1Yur1/tqhlm3CbJ6z36Dyjqoz3YWndRdA4MqpkD8GBP5RZChJja+0fZ3Qb+JH9Q5V6U/Q37fb21IgZ1M8w==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder Community toute la night", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.1ms | Allocations: 17644)
+
+
+
+NoMethodError - undefined method `duration' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/8bd0d3905bbef2a8/variables" for ::1 at 2020-11-03 19:54:32 +0100
+Started POST "/events" for ::1 at 2020-11-03 19:54:53 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"05hv1Yur1/tqhlm3CbJ6z36Dyjqoz3YWndRdA4MqpkD8GBP5RZChJja+0fZ3Qb+JH9Q5V6U/Q37fb21IgZ1M8w==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder Community toute la night", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 14.6ms | Allocations: 18012)
+
+
+
+NoMethodError - undefined method `duration' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/935f4543c8bc415e/variables" for ::1 at 2020-11-03 19:54:53 +0100
+Started POST "/events" for ::1 at 2020-11-03 19:55:06 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"05hv1Yur1/tqhlm3CbJ6z36Dyjqoz3YWndRdA4MqpkD8GBP5RZChJja+0fZ3Qb+JH9Q5V6U/Q37fb21IgZ1M8w==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder Community toute la night", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 10.0ms | Allocations: 17934)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/2294039f0bd7a57d/variables" for ::1 at 2020-11-03 19:55:07 +0100
+Started POST "/events" for ::1 at 2020-11-03 19:55:16 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"05hv1Yur1/tqhlm3CbJ6z36Dyjqoz3YWndRdA4MqpkD8GBP5RZChJja+0fZ3Qb+JH9Q5V6U/Q37fb21IgZ1M8w==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder Community toute la night", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 8.1ms | Allocations: 18055)
+
+
+
+NoMethodError - undefined method `%' for :duration:Symbol:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/70cf2193753c2438/variables" for ::1 at 2020-11-03 19:55:16 +0100
+Started POST "/events" for ::1 at 2020-11-03 19:57:20 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"05hv1Yur1/tqhlm3CbJ6z36Dyjqoz3YWndRdA4MqpkD8GBP5RZChJja+0fZ3Qb+JH9Q5V6U/Q37fb21IgZ1M8w==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder Community toute la night", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 11.7ms | Allocations: 17954)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/c8a6d35aba8870e0/variables" for ::1 at 2020-11-03 19:57:21 +0100
+Started GET "/events/new" for ::1 at 2020-11-03 19:57:28 +0100
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2854)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 9209)
+
+
+Started POST "/events" for ::1 at 2020-11-03 19:57:58 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"CyLwMjeIx2/kkARD0X8A9lBUcYaf5FytW+yuXHrZx1Ykoowe+bOxsriojAKvjMWwMQOC65IUacUZV54XeG4t5Q==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder community et manger des zappi", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 3754)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/2924c1692f6512d5/variables" for ::1 at 2020-11-03 19:57:58 +0100
+Started POST "/events" for ::1 at 2020-11-03 20:04:35 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"CyLwMjeIx2/kkARD0X8A9lBUcYaf5FytW+yuXHrZx1Ykoowe+bOxsriojAKvjMWwMQOC65IUacUZV54XeG4t5Q==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder community et manger des zappi", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 11.3ms | Allocations: 218282)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/bd38fe11f32d2b40/variables" for ::1 at 2020-11-03 20:04:35 +0100
+Started POST "/events" for ::1 at 2020-11-03 20:04:44 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"CyLwMjeIx2/kkARD0X8A9lBUcYaf5FytW+yuXHrZx1Ykoowe+bOxsriojAKvjMWwMQOC65IUacUZV54XeG4t5Q==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"On va regarder community et manger des zappi", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3778)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/217909a45198a923/variables" for ::1 at 2020-11-03 20:04:44 +0100
+Started GET "/events/new" for ::1 at 2020-11-03 20:05:12 +0100
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3922)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 25.0ms | ActiveRecord: 0.5ms | Allocations: 15609)
+
+
+Started POST "/events" for ::1 at 2020-11-03 20:05:44 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"4BQZEMOZuQQUs3JPnJnCMPLcIXwFPAAhelzf3i7jKbLPlGU8DaLP2UiL+g7iagd2k4vSEQjMNUk45++VLFTDAQ==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"nan nan nan nan nan nan nan nan nan", "price"=>"19", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 3744)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/891985c625b2a43d/variables" for ::1 at 2020-11-03 20:05:44 +0100
+Started GET "/" for ::1 at 2020-11-03 20:08:29 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 1.2ms | Allocations: 7849)
+
+
+Started GET "/events/new" for ::1 at 2020-11-03 20:08:32 +0100
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 8123)
+
+
+Started POST "/events" for ::1 at 2020-11-03 20:08:53 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"8CHbDP96yoAc2ShsVhtV2HwPczp/I5hR6IyPyhirxsPfoacgMUG8XUDhoC0o6JCeHViAV3LTrTmqN7+BGhwscA==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"nan na na na na na na na na na na", "price"=>"5", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3761)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/5eb3f432526dead9/variables" for ::1 at 2020-11-03 20:08:53 +0100
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2020-11-03 00:00:00"], ["duration", 60], ["title", "super truc"], ["description", "nan nan nan nan nan nan nan"], ["price", 5], ["location", "chez moi"], ["event_admin_id", 1], ["created_at", "2020-11-03 19:19:21.735228"], ["updated_at", "2020-11-03 19:19:21.735228"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-11-03 20:21:00 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 26.2ms | Allocations: 7494)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 73ms (Views: 51.9ms | ActiveRecord: 14.4ms | Allocations: 25395)
+
+
+Started GET "/events/11" for ::1 at 2020-11-03 20:21:05 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 74)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.7ms | Allocations: 6075)
+
+
+Started GET "/" for ::1 at 2020-11-03 20:21:58 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 1.0ms | Allocations: 6408)
+
+
+Started GET "/" for ::1 at 2020-11-03 20:24:10 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 6519)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 63ms (Views: 47.8ms | ActiveRecord: 11.0ms | Allocations: 19475)
+
+
+Started GET "/" for ::1 at 2020-11-03 20:24:11 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.9ms | Allocations: 6401)
+
+
+Started GET "/events/new" for ::1 at 2020-11-03 20:24:14 +0100
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29:in `authenticate_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 114.0ms | Allocations: 201491)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 119.0ms | ActiveRecord: 0.4ms | Allocations: 206770)
+
+
+Started POST "/events" for ::1 at 2020-11-03 20:24:49 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZHfsxEUrtFr+zmNIOSUEYm1n/m2n4G7+19xKfgiFl4pL95DoixDCh6L26wlH1sEkDDANAKoQW5aVZ3o1CjJ9OQ==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community 2", "description"=>"On va regarder les saisons nazes et picoler pour oublier", "price"=>"5", "location"=>"Chez moi, toujours"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29:in `authenticate_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 5924)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/b6137ffc818813f4/variables" for ::1 at 2020-11-03 20:24:49 +0100
+Started GET "/" for ::1 at 2020-11-03 20:25:34 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.1ms | Allocations: 6400)
+
+
+Started GET "/" for ::1 at 2020-11-03 20:25:40 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 6377)
+
+
+Started GET "/events" for ::1 at 2020-11-03 20:25:44 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.9ms | Allocations: 6401)
+
+
+Started GET "/events" for ::1 at 2020-11-03 20:25:48 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1253)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.6ms | Allocations: 6397)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2020-11-03 00:00:00"], ["duration", 60], ["title", "super truc 2"], ["description", "nan nan nan nan nan nan nan"], ["price", 5], ["location", "chez moi"], ["event_admin_id", 1], ["created_at", "2020-11-03 19:30:19.215929"], ["updated_at", "2020-11-03 19:30:19.215929"]]
+  [1m[35m (113.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/events" for ::1 at 2020-11-03 20:30:41 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 7549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 80ms (Views: 59.6ms | ActiveRecord: 14.5ms | Allocations: 25450)
+
+
+Started GET "/events/new" for ::1 at 2020-11-03 20:31:42 +0100
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29:in `authenticate_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 186.2ms | Allocations: 204300)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 199.8ms | ActiveRecord: 0.3ms | Allocations: 209485)
+
+
+Started POST "/events" for ::1 at 2020-11-03 20:31:58 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"re+l2V3Q07pammpfpuIXuSOOmnxmaJqzqrLPjxck0Y+Cb9n1k+ulZwai4h7YEdL/QtlpEWuYr9voCf/EFZM7PA==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"na na na na na na na ", "price"=>"3", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:29:in `authenticate_user'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.4ms | Allocations: 5963)
+
+
+
+NoMethodError - undefined method `%' for nil:NilClass:
+  app/models/event.rb:21:in `multiple_of_five?'
+  app/controllers/events_controller.rb:19:in `create'
+
+Started POST "/__better_errors/e5a33bf762b61ad8/variables" for ::1 at 2020-11-03 20:31:58 +0100
+Started GET "/" for ::1 at 2020-11-03 20:36:47 +0100
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:11:in `each_with_index'
+  Rendered events/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 6600)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 59ms (Views: 44.8ms | ActiveRecord: 9.7ms | Allocations: 19588)
+
+
+Started GET "/events/new" for ::1 at 2020-11-03 20:36:49 +0100
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 7571)
+
+
+Started POST "/events" for ::1 at 2020-11-03 20:37:09 +0100
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"Q1jRToFTeNZ5i0+N7Id5gBCvZ/Y2uD/bkOYJpdW2DEhs2K1iT2gOCyWzx8ySdLzGcfiUmztICrPSXTnu1wHm+w==", "event"=>{"start_date(1i)"=>"2020", "start_date(2i)"=>"11", "start_date(3i)"=>"3", "duration"=>"60", "title"=>"Soirée Community", "description"=>"na na na  na na na na na na ", "price"=>"2", "location"=>"Chez moi"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `authenticate_user'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[36mEvent Create (1.3ms)[0m  [1m[32mINSERT INTO "events" ("start_date", "duration", "title", "description", "price", "location", "event_admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["start_date", "2020-11-03 00:00:00"], ["duration", 60], ["title", "Soirée Community"], ["description", "na na na  na na na na na na "], ["price", 2], ["location", "Chez moi"], ["event_admin_id", 1], ["created_at", "2020-11-03 19:37:09.983593"], ["updated_at", "2020-11-03 19:37:09.983593"]]
+  ↳ app/controllers/events_controller.rb:20:in `create'
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:20:in `create'
+Redirected to http://localhost:3000/events/13
+Completed 302 Found in 28ms (ActiveRecord: 14.0ms | Allocations: 5677)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:37:10 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 44.8ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.5ms | Allocations: 6060)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:41:19 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.9ms | Allocations: 7076)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:44:00 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:16
+  Rendered events/show.html.erb within layouts/application (Duration: 191.2ms | Allocations: 7114)
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 1.5ms | Allocations: 8780)
+
+
+
+NoMethodError - undefined method `title' for nil:NilClass:
+  app/views/events/show.html.erb:19
+
+Started POST "/__better_errors/3df75e2843d242a1/variables" for ::1 at 2020-11-03 20:44:00 +0100
+Started GET "/events/13" for ::1 at 2020-11-03 20:44:39 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:16
+  Rendered events/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 1.7ms | Allocations: 7997)
+
+
+Started GET "/users/1" for ::1 at 2020-11-03 20:44:44 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 57.7ms | Allocations: 156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 0.3ms | Allocations: 5906)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:45:58 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:16
+  Rendered events/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 29ms (Views: 23.5ms | ActiveRecord: 1.5ms | Allocations: 7969)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:46:37 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:16
+  Rendered events/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 1.3ms | Allocations: 7970)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:47:45 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:16
+  Rendered events/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 1.7ms | Allocations: 7986)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:47:50 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:16
+  Rendered events/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 1.2ms | Allocations: 6539)
+
+
+Started GET "/events/13" for ::1 at 2020-11-03 20:48:02 +0100
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:13:in `show'
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/events/show.html.erb:15
+  Rendered events/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.9ms | Allocations: 8015)
+
+
