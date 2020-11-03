@@ -10,7 +10,7 @@ require 'time'
 # user.save!
 
 # create random users
-10.times do
+3.times do
   User.create!(email: Faker::Name.first_name+Faker::Name.last_name+"@yopmail.com",
   password: ["yellow1!!", "@coucou23", "4marseille?", "password-87", "!supersuper"].sample,
   description: Faker::TvShows::Community.quotes,
@@ -22,7 +22,7 @@ puts "USERS"
 puts tp User.all
 
 #create random events
-10.times do
+5.times do
 
   Event.create!(
   start_date: Faker::Date.between(from: Date.today, to: 1.year.from_now),
