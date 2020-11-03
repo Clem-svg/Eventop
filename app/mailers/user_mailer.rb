@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: 'mon_site78@yopmail.com'
+  default from: 'filou78@yopmail.com'
 
   def welcome_email(user)
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
@@ -18,6 +18,5 @@ class UserMailer < ApplicationMailer
     @url = "http://url.com"
     mail(to: @user.email, subject: '+1 participant pour ton event !')
   end
-
 
 end
