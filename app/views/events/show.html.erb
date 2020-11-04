@@ -7,9 +7,10 @@
     <h6 class="font-weight-bold">Durée : <span class="text-muted"><%= @event.duration %></span></h6>
     <h6 class="font-weight-bold">Prix : <span class="text-muted"><%= @event.price %></span></h6>
     <h6 class="font-weight-bold">Lieu : <span class="text-muted"><%= @event.location %></span></h6>
+    <h6 class="font-weight-bold">Crée par : <span class="text-muted"><%= @event.event_admin.first_name %> <%= @event.event_admin.last_name %></span></h6>
     <br><br>
     <h6 class="font-weight-bold"><span class="text-secondary"><%= @event.description %></span></h6>
-  
+
 
   </div>
 </div>
